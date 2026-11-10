@@ -1,0 +1,212 @@
+# =====================================================================
+#  .gitignore – osobní učební repozitář
+#  Pravidla: co tu je uvedeno, git nikdy nepřidá (pokud to už není
+#  commitnuté – takové soubory je nutné odebrat přes `git rm --cached`).
+# =====================================================================
+
+# ---------------------------------------------------------------------
+# 1) TAJNÉ ÚDAJE – hesla, klíče, tokeny
+# ---------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+!.env.sample
+*.env
+.envrc
+secrets/
+secret/
+*.secret
+*secret*.json
+*secrets*.json
+credentials*
+*credentials*.json
+service-account*.json
+client_secret*.json
+token.json
+*.token
+.netrc
+.npmrc
+.pypirc
+auth.json
+
+# Klíče a certifikáty
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.crt
+*.cer
+*.der
+*.asc
+*.gpg
+*.kdbx
+id_rsa*
+id_ed25519*
+id_ecdsa*
+id_dsa*
+*.ppk
+
+# Cloudové konfigurace
+.aws/
+.azure/
+.gcloud/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+
+# ---------------------------------------------------------------------
+# 2) OSOBNÍ A CITLIVÁ DATA – zdraví, finance, doklady
+#    Cokoli osobního ukládej do složek níže, git je bude ignorovat.
+# ---------------------------------------------------------------------
+private/
+personal/
+soukrome/
+osobni/
+data/
+datasets/
+exports/
+export/
+backup/
+backups/
+zaloha/
+zalohy/
+dokumenty/
+documents/
+finance/
+finance*/
+zdravi/
+health/
+medical/
+banka/
+bank/
+dane/
+taxes/
+
+# Kancelářské dokumenty, tabulky a exporty (často obsahují osobní údaje)
+*.pdf
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.xlsm
+*.ods
+*.odt
+*.csv
+*.tsv
+*.numbers
+*.pages
+*.ofx
+*.qif
+*.mt940
+*.sta
+
+# Databáze
+*.db
+*.sqlite
+*.sqlite3
+*.mdb
+*.accdb
+*.sql
+*.dump
+*.bak
+
+# Fotky a skeny (doklady, zprávy…)
+*.heic
+*.HEIC
+scan*/
+skeny/
+
+# Archivy
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+*.tgz
+
+# ---------------------------------------------------------------------
+# 3) OPERAČNÍ SYSTÉM
+# ---------------------------------------------------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+# Linux
+*~
+.directory
+.Trash-*
+
+# ---------------------------------------------------------------------
+# 4) EDITORY A IDE
+# ---------------------------------------------------------------------
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.iml
+*.swp
+*.swo
+*.sublime-workspace
+.history/
+
+# ---------------------------------------------------------------------
+# 5) PROGRAMOVACÍ JAZYKY – závislosti a build výstupy
+# ---------------------------------------------------------------------
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+*.egg-info/
+dist/
+build/
+
+# Node.js / JavaScript
+node_modules/
+npm-debug.log*
+yarn-error.log*
+.next/
+.nuxt/
+.cache/
+coverage/
+
+# Java / Kotlin
+*.class
+target/
+.gradle/
+
+# .NET
+bin/
+obj/
+
+# ---------------------------------------------------------------------
+# 6) LOGY A DOČASNÉ SOUBORY
+# ---------------------------------------------------------------------
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+
+# ---------------------------------------------------------------------
+# 7) CLAUDE CODE – lokální (osobní) nastavení
+# ---------------------------------------------------------------------
+.claude/settings.local.json
+CLAUDE.local.md
